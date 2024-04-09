@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Resume Form</title>
+</head>
+<body>
+    
+    <div class="container" id="cv-form">
+        <p class="text-center my-4 fw-bold fs-1 " style="color:#010f09;">RESUME
+            BUILDING</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Personal Information</h3>
+                    <div class="form-group">
+                        <label for="nameField" >Name</label>
+                        <input type="text" 
+                        id="nameField" 
+                        placeholder="Enter Here" 
+                        class="form-control"
+                    >
+                    </div>
+                    
+                    <div class="form-group mt-2">
+                        <label for="contactField" name="contact">Contact</label>
+                        <input type="text" 
+                        id="contactField" 
+                        placeholder="Enter Here" 
+                        class="form-control">
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="dateField" name="date">Date of birth</label>
+                        <input type="date" 
+                        id="dateField" 
+                        placeholder="Enter Here" 
+                        class="form-control">
+                    </div>
+
+
+                    <div class="form-group mt-2">
+                        <label for="addressField">Address</label>
+                        <textarea type="text" name="address" 
+                        id="addressField" 
+                        placeholder="Enter Here"
+                         class="form-control" 
+                         rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="genderField">gender</label>
+                        <input type="radio" name="gender" 
+                        id="genderField" value="male">
+                        <label for="male">male</label>
+                      
+                        <input type="radio" name="gender" 
+                        id="genderField1" value="female">
+                        <label for="male">female</label>
+                        
+                        
+                         
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="" >Select your photo</label>
+                        <input id="imgField" type="file" class="form-control"/>
+                    </div>
+
+                    <p class="text-secondary my-2">Important Links</p>
+                    
+                    <div class="form-group my-2">
+                        <label for="emailField" name="emailField">Email</label>
+                        <input type="text" id="emailField" placeholder="Enter Here" class="form-control">
+                    </div>
+
+                    <div class="form-group my-2">
+                        <label for="liField" name="liField">LinkedIn</label>
+                        <input type="text" id="liField" placeholder="Enter Here" class="form-control">
+                    </div>
+                    
+                    <div class="form-group my-2">
+                        <label for="ghField" name="ghField">Github</label>
+                        <input type="text" id="ghField" placeholder="Enter Here" class="form-control">
+                    </div>
+                    
+                    <div class="form-group mt-8 pt-5" id="lng">
+                        <label for="" name="languages">Languages</label>
+                        <textarea type="text" placeholder="Enter Here" class="form-control lngField" ></textarea>
+                    
+                        <div class="container text-center mt-2" id="lngAddButton" text-color="dark">
+                            <button onclick="addNewLngField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+
+                        <div class="w3-light-grey">
+                            <div class="w3-green" style="height:24px;width:25%"></div>
+                          </div><br>
+                    </div>
+                    
+                    <div class="form-group mt-2" id="hbs">
+                        <label for="" name="hobbies">Hobbies</label>
+                        <textarea type="text" placeholder="Enter Here" class="form-control hbsField" ></textarea>
+                    
+                        <div class="container text-center mt-2" id="hbsAddButton">
+                            <button onclick="addNewHbsField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+        
+
+                <div class="col-md-6">
+                    <h3>Professional Information</h3>
+
+                    <div class="form-group mt-2">
+                        <label for="" >Objective</label>
+                        <textarea type="text" id="objectiveField" placeholder="Enter Here" class="form-control" ></textarea>
+                    </div>
+                    
+                    <div class="form-group mt-2" id="ed">
+                        <label for="" name="ed">Education</label>
+                        <textarea type="text" placeholder="Enter Here" class="form-control edField" ></textarea>
+                    
+                        <div class="container text-center mt-2" id="edAddButton">
+                            <button onclick="addNewEdField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2" id="core">
+                        <label for="" name="core">Core Skills</label>
+                        <textarea type="text"  placeholder="Enter Here" class="form-control"></textarea>
+
+                        <div class="container text-center mt-2" id="coreAddButton">
+                            <button onclick="addNewCoreField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2" id="soft">
+                        <label for="" name="soft">Soft Skills</label>
+                        <textarea type="text"  placeholder="Enter Here" class="form-control" ></textarea>
+
+                        <div class="container text-center mt-2" id="softAddButton">
+                            <button onclick="addNewSoftField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2" id="project">
+                        <label for="" name="project">Projects</label>
+                        <textarea type="text"  placeholder="Enter Here" class="form-control" ></textarea>
+
+                        <div class="container text-center mt-2" id="projectAddButton">
+                            <button onclick="addNewProjectField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center mt-3">
+                <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate Resume</button>
+            </div>
+    </div>
+
+    </form>
+<br>
+<br>
+<br>
+    <div class="container" id="cv-template" style="border: 3px solid rgb(2, 30, 30);">
+
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background" ">
+                <img src="binpic.jpg" alt="" id="imgTemplate" class="img-fluid myimg">
+            
+                <div class="container">
+                    <!-- <p id="nameT1">name</p> -->
+                    <hr>
+                    <div class="cen">
+                    <center>
+                    <div style="display: flex " style="color: aliceblue";>
+                        <h6 style="padding-top: 2px;">contact:</h6>
+                        <p id="contactT" style="text-align: left; padding-left: 5px;"></p>
+                    </div>
+
+                    <div style="display: flex " style="color: aliceblue";>
+                        <h6 style="padding-top: 2px;"></h6>
+                        <p id="dateT" style="text-align: left; padding-left: 5px;">date</p>
+                    </div>
+
+                    <div style="display: flex"  style="color: aliceblue;">
+                        <h6 style="padding-top: 2px;">address:</h6>
+                        <div>
+                        <p id="addressT" style="text-align: left; padding-left: 5px;" rows="5"></p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex"  style="color: aliceblue;">
+                        <h6 style="padding-top: 2px;">gender:</h6>
+                        <div>
+                        <p id="genderT" style="text-align: left; padding-left: 5px;"></p>
+                        </div>
+                    </div>
+
+
+                    
+                    <div  style="display: flex; text-align: center" style="color: aliceblue";>
+                        <h6 style="padding-top: 2px;">email:</h6>
+                        <p><a id="emailT" style="text-align: left; padding-left: 5px;" href="#1">bindurbindu7@gmail.com </a></p>
+                    </div>
+                    <div style="display: flex; text-align: center" style="color: aliceblue;">
+                        <h6 style="padding-top: 2px;">linkedin:</h6>
+                        <p><a id="liT"style="text-align: left; padding-left: 5px;" href="#2">www.linkedin.com/in/bindu/</a></p>
+                    </div>
+                    <div style="display: flex; text-align: center" style="color: aliceblue;">
+                        <h6 style="padding-top: 2px;">github:</h6>
+                        <p><a id="ghT" style="text-align: left; padding-left: 5px;" href="#3">https://github.com/bindu</a></p>
+                    </div>
+                    </center>
+                </div>
+                    <hr>
+                <br>
+                <br>
+                <br>
+                    <div class="card mt-8 ">
+                        <div class="card-header " style="background-color: rgb(134, 194, 239)    ;" >
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="card-body py-10" >
+                            <ul id="lngT" style="list-style-type: none;">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            </ul>
+                        </div>
+                    
+                    </div>
+                
+                    <br>
+                    <br>
+                    <div class="card mt-4">
+                        <div class="card-header" style="background-color: rgb(134, 194, 239);">
+                            <h3>Hobbies</h3>
+                        </div>
+                        <div class="card-body py-10">
+                            <ul id="hbsT" style="list-style-type: none;">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            </ul>
+                        </div>
+                   
+                    </div>
+                </div>
+               
+            
+            </div>
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-size: 120px;">ABC</h1>
+                <center><p>software developer</p></center>
+                <div class="card mt-4">
+                    <div class="card-header" style="background-color: rgb(134, 194, 239);">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">address</p>
+
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header" style="background-color: rgb(134, 194, 239);">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="edT" style="list-style-type: none;">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header" id="background1" style="background-color: rgb(134, 194, 239);">
+                        <h3>Core Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="cskillsT" style="list-style-type: none;">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header" id="background1" style="background-color: rgb(134, 194, 239);">
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="card-body" style="list-style-type: none;">
+                        <ul id="sskillsT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header" id="background1" style="background-color: rgb(134, 194, 239);">
+                        <h3>Projects</h3>
+                    </div>
+                    <div class="card-body" style="list-style-type: none;">
+                        <ul id="projectsT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illo soluta dolorem omnis, voluptate praesentium sunt reiciendis ducimus et id at. Deserunt quod numquam aliquid facilis delectus repellendus dicta in laborum fugit iure culpa error magni natus ad, explicabo odit?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3 text-center">
+        <button  onclick="printcv()" class="btn btn-primary btn-lg">print resume</button>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

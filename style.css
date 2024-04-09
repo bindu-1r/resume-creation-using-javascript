@@ -1,0 +1,48 @@
+#cv-template{
+    display: none;
+}
+
+.myimg{
+    border: 2px solid black;
+    
+    width: 170px;
+}
+
+.cen{
+  text-align: center;
+}
+.background{
+    background-color: rgb(138, 199, 232);
+}
+
+.block1,block2{
+  padding:50px;
+  margin:50px;
+}
+/*#background1{
+    background-color:rgb(59, 144, 7);
+    
+}*/
+
+a:hover{
+color:red;
+}
+
+
+
+a:link {
+    color: rgb(42, 10, 122);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(63, 9, 212);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(197, 43, 43);
+  }
+  
+  /* selected link */
+  
